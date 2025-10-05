@@ -1,4 +1,4 @@
-# Module 8 Assignment: Monitoring & Logging Setup with Kubernetes
+# Monitoring & Logging Setup with Kubernetes
 
 ## Objective
 
