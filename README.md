@@ -1,4 +1,4 @@
-# Module 8 Assignment: Monitoring & Logging Setup with Kubernetes
+# Monitoring & Logging Setup with Kubernetes
 
 ## Objective
 
@@ -30,7 +30,7 @@ kubectl version --client
 ```
 
 **Screenshot:**
-![Application running in cluster](images/Application running in cluster.png)
+![Application running in cluster](images/Application_running_in_cluster.png)
 
 ---
 
@@ -90,7 +90,7 @@ nohup kubectl port-forward svc/nginx-service 8080:80 --address 0.0.0.0 > nginx.l
 Access URL: `http://<EC2_PUBLIC_IP>:8080`
 
 **Screenshot:**
-![Application running in cluster](images/Application running in cluster.png)
+![Application running in cluster](images/Application_running_in_cluster.png)
 
 ---
 
@@ -115,7 +115,7 @@ nohup kubectl port-forward -n monitoring svc/prometheus-server 9090:80 --address
 Access URL: `http://<EC2_PUBLIC_IP>:9090`
 
 **Screenshot:**
-![Prometheus metrics dashboard](images/Prometheus metrics dashboard.png)
+![Prometheus metrics dashboard](images/Prometheus_metrics_dashboard.png)
 
 Prometheus monitors:
 
@@ -144,7 +144,7 @@ Promtail collects logs from pods (Nginx) and sends them to Loki.
 
 Access Loki: `http://<EC2_PUBLIC_IP>:3100`
 
-**Screenshot:**
+**Screenshot (example log check):**
 ![Loki Logs](images/loki.log.png)
 
 ---
@@ -174,8 +174,8 @@ Add data sources:
 * Loki: `http://localhost:3100`
 
 **Screenshots:**
-![Grafana metrics dashboard](images/Grafana metrics dashboard.png)
-![Grafana-alerting](images/Grafana-alerting .png)
+![Grafana metrics dashboard](images/Grafana_metrics_dashboard.png)
+![Grafana alerting](images/Grafana-alerting.png)
 
 ---
 
@@ -210,7 +210,7 @@ Add data sources:
 | Loki       | http://<EC2_PUBLIC_IP>:3100 |
 | Grafana    | http://<EC2_PUBLIC_IP>:3000 |
 
-> Replace `<EC2_PUBLIC_IP>` with your EC2 instance public IPv4: `174.129.50.231`
+> Replace `<EC2_PUBLIC_IP>` with your EC2 instance public IPv4 (e.g., `174.129.50.231`)
 
 ---
 
@@ -224,11 +224,11 @@ Add data sources:
 
 ### ✅ Deliverables Included
 
-* `images/Application running in cluster.png`
-* `images/Prometheus metrics dashboard.png`
+* `images/Application_running_in_cluster.png`
+* `images/Prometheus_metrics_dashboard.png`
 * `images/Node_Exporter.png`
-* `images/Grafana metrics dashboard.png`
-* `images/Grafana-alerting .png`
+* `images/Grafana_metrics_dashboard.png`
+* `images/Grafana-alerting.png`
 
 ---
 
