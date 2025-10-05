@@ -84,7 +84,7 @@ Port-forward to access externally:
 nohup kubectl port-forward svc/nginx-service 8080:80 --address 0.0.0.0 > nginx.log 2>&1 &
 ```
 
-**Screenshot:**  `images/Application running in cluster.png`
+**Screenshot:**  ![Application running in cluster](images/Application running in cluster.png)
 
 Access URL: `http://<EC2_PUBLIC_IP>:8080`
 
@@ -110,7 +110,7 @@ nohup kubectl port-forward -n monitoring svc/prometheus-server 9090:80 --address
 
 Access URL: `http://<EC2_PUBLIC_IP>:9090`
 
-**Screenshot:**  `images/Prometheus metrics dashboard.png`
+**Screenshot:**  ![Prometheus metrics dashboard](images/Prometheus metrics dashboard.png)
 
 Prometheus monitors:
 
@@ -139,7 +139,7 @@ Promtail collects logs from pods (Nginx) and sends them to Loki.
 
 Access Loki: `http://<EC2_PUBLIC_IP>:3100`
 
-**Screenshot:** Loki logs visible in Grafana
+**Screenshot:**  ![Loki Logs](images/loki.log)
 
 ---
 
@@ -169,9 +169,9 @@ Add data sources:
 
 **Dashboards:**
 
-* Metrics: `images/Grafana metrics dashboard.png`
+* Metrics: ![Grafana metrics dashboard](images/Grafana metrics dashboard.png)
 * Logs: query Nginx logs from Loki
-* Alerts (Bonus): `images/Grafana-alerting .png`
+* Alerts (Bonus): ![Grafana-alerting](images/Grafana-alerting .png)
 
 ---
 
@@ -180,7 +180,7 @@ Add data sources:
 * Installed automatically with Prometheus Helm chart
 * Collects **node-level metrics**: CPU, memory, disk, network
 
-**Screenshot:**  `images/Node_Exporter.png`
+**Screenshot:**  ![Node Exporter](images/Node_Exporter.png)
 
 ---
 
