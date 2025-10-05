@@ -1,4 +1,4 @@
-# Monitoring & Logging Setup with Kubernetes
+# Module 8 Assignment: Monitoring & Logging Setup with Kubernetes
 
 ## Objective
 
@@ -144,8 +144,8 @@ Promtail collects logs from pods (Nginx) and sends them to Loki.
 
 Access Loki: `http://<EC2_PUBLIC_IP>:3100`
 
-**Screenshot (example log check):**
-![Loki Logs](images/loki.log.png)
+**Screenshot:**
+*(Use your Loki log screenshot if available, otherwise leave empty)*
 
 ---
 
@@ -210,7 +210,7 @@ Add data sources:
 | Loki       | http://<EC2_PUBLIC_IP>:3100 |
 | Grafana    | http://<EC2_PUBLIC_IP>:3000 |
 
-> Replace `<EC2_PUBLIC_IP>` with your EC2 instance public IPv4 (e.g., `174.129.50.231`)
+> Replace `<EC2_PUBLIC_IP>` with your EC2 instance public IPv4: `174.129.50.231`
 
 ---
 
